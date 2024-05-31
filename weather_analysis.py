@@ -2,7 +2,7 @@ import duckdb
 import csv
 
 city = 'Austin'
-dir_path = 'C:/Users/xxxx/Documents/Projects/PythonProject/weatheranalysis/output'
+dir_path = './output'
 
 def avearge_temp_year():
     con = duckdb.connect("data/daily_weather_0524.db")
