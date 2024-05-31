@@ -1,4 +1,4 @@
-#### This scripts generates top 10 hottest years based on the historical data provided by Kaggle for cities all around the world
+#### This scripts generates top 10 hottest and coldest years based on the historical data provided by Kaggle for cities all around the world
 
 #### [The Weather Dataset](https://www.kaggle.com/datasets/guillemservera/global-daily-climate-data)
 
