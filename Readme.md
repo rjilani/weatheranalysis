@@ -15,3 +15,6 @@
 
 #### Hottest average temperature for city of Austin USA
 ![img_1.png](img_1.png)
+
+#### Coldest average temperature for city of Austin USA
+![img_3.png](img_3.png)
