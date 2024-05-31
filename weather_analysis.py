@@ -1,12 +1,12 @@
 import duckdb
 import csv
 
-city = 'Austin'
+city = 'Karachi'
 dir_path = './output'
 
 def avearge_temp_year():
     con = duckdb.connect("data/daily_weather_0524.db")
-    filename = f"./output/weather_records_{city}.csv"
+    filename = f"{dir_path}/weather_records_{city}.csv"
     x = range(1900, 2024)
     with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
@@ -28,13 +28,21 @@ def top_ten_hottest_yr():
         f"SELECT * FROM '{dir_path}/weather_records_{city}.csv' "
         r"order by Temperature desc limit 10").df()
     print(df.head(n=10))
-    df.to_csv(f"./output/weather_records_{city}_top10.csv", encoding='utf-8', index=False)
+    df.to_csv(f"{dir_path}/weather_records_hottest_{city}_top_10.csv", encoding='utf-8', index=False)
 
+def top_ten_coldest_yr():
+    global df
+    df = duckdb.sql(
+        f"SELECT * FROM '{dir_path}/weather_records_{city}.csv' "
+        r"order by Temperature asc limit 10").df()
+    print(df.head(n=10))
+    df.to_csv(f"{dir_path}/weather_records_coldest_{city}_top_10.csv", encoding='utf-8', index=False)
 
 if __name__ == '__main__':
     try:
         avearge_temp_year()
         top_ten_hottest_yr()
+        top_ten_coldest_yr()
     except Exception as e:
         print("An exception occurs: " + str(e))
         print(e)
