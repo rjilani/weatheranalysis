@@ -2,6 +2,6 @@
 .idea/**
 .venv/**
 data/**
-output/**
+
 main.py
 topten_hottest_years.py

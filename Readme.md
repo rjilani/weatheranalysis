@@ -8,13 +8,13 @@
 ``` pip install duckdb ```
 
 #### Hottest average temperature for city of Karachi Pakistan based on data since 1942
-![img.png](img.png)
+![img.png](img/hottest_karachi.png)
 
 #### Coldest average temperature for city of Karachi Pakistan based on data since 1942
-![img_2.png](img_2.png)
+![img_2.png](img/coldest_karachi.png)
 
 #### Hottest average temperature for city of Austin USA
-![img_1.png](img_1.png)
+![img_1.png](img/hottest_austin.png)
 
 #### Coldest average temperature for city of Austin USA
-![img_3.png](img_3.png)
+![img_3.png](img/coldest_austin.png)
